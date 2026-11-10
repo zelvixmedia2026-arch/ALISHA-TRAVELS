@@ -1,9 +1,11 @@
+import { Routes, Route } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -11,7 +13,13 @@ function App() {
       <Navbar />
 
       <main>
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/blog/mangalore-to-bekal-taxi-service"
+            element={<Blog />}
+          />
+        </Routes>
       </main>
 
       <Footer />
